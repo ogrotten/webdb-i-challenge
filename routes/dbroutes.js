@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('./data/dbConfig.js');
+const db = require('../data/dbConfig.js');
 const router = express.Router();
 
 const knex= require("../data/dbConfig.js")
@@ -15,3 +15,5 @@ router.get("/", (req, res) => {
 		res.status(500).json({msg: "Problem", err: err});
 	});
 });
+
+module.exports = router;
